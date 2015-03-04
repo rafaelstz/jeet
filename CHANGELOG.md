@@ -1,3 +1,12 @@
+### 7.0.0
+- Enhancements
+  - Added ability to reset alignments with `align(none)`.
+  - `0%` values now get compiled to `0` to reduce CSS bloat.
+- Fixes
+  - Removed `text-align: inherit`.
+- Breaking changes
+  - Removed `cf()` from `column()`, `span()`, and `center()` to reduce outputted CSS.
+
 ### 6.1.2
 - Fixes
   - Critical bug in Scss port that caused nested columns to have incorrect gutters.
