@@ -58,18 +58,6 @@
 }
 
 /**
- * Aliases for j-column().
- */
-
-@mixin column($args...) {
-  @include j-column($args...);
-}
-
-@mixin col($args...) {
-  @include j-column($args...);
-}
-
-/**
  * Get the width of a column and nothing else.
  * @param {number} [$ratios=1] - A width relative to its container as a fraction.
  * @param {number} [$gutter=$jeet-gutter] - Specify the gutter width as a percentage of the containers width.
@@ -79,36 +67,12 @@
 }
 
 /**
- * Aliases for j-column-width().
- */
-
-@function column-width($args...) {
-  @return j-column-width($args...);
-}
-
-@function cw($args...) {
-  @return j-column-width($args...);
-}
-
-/**
  * Get the gutter size of a column and nothing else.
  * @param {number} [ratios=1] - A width relative to its container as a fraction.
  * @param {number} [gutter=jeet.gutter] - Specify the gutter width as a percentage of the containers width.
  */
 @function j-column-gutter($ratios: 1, $gutter: $jeet-gutter) {
   @return jeet-get-percentage(nth(jeet-get-column($ratios, $gutter), 2));
-}
-
-/**
- * Alias for j-column-gutter().
- */
-
-@function column-gutter($args...) {
-  @return j-column-gutter($args...);
-}
-
-@function cg($args...) {
-  @return j-column-gutter($args...);
 }
 
 /**
@@ -159,13 +123,6 @@
 }
 
 /**
- * Alias for j-span().
- */
-@mixin span($args...) {
-  @include j-span($args...);
-}
-
-/**
  * Reorder columns without altering the HTML.
  * @param {number} [$ratios=0] - Specify how far along you want the element to move.
  * @param {string} [$col-or-span=column] - Specify whether the element has a gutter or not.
@@ -191,25 +148,11 @@
 }
 
 /**
- * Alias for j-shift().
- */
-@mixin shift($args...) {
-  @include j-shift($args...);
-}
-
-/**
  * Reset an element that has had shift() applied to it.
  */
 @mixin j-unshift() {
   position: static;
   left: 0;
-}
-
-/**
- * Alias for j-unshift().
- */
-@mixin unshift() {
-  @include j-unshift();
 }
 
 /**
@@ -227,18 +170,6 @@
       background: rgba($color, .05);
     }
   }
-}
-
-/**
- * Aliases for j-edit().
- */
-
-@mixin edit($args...) {
-  @include j-edit($args...);
-}
-
-@mixin debug($args...) {
-  @include j-edit($args...);
 }
 
 /**
@@ -264,13 +195,6 @@
 }
 
 /**
- * Alias for j-center().
- */
-@mixin center($args...) {
-  @include j-center($args...);
-}
-
-/**
  * Uncenter an element.
  */
 @mixin j-uncenter() {
@@ -285,13 +209,6 @@
     left: 0;
     right: 0;
   };
-}
-
-/**
- * Alias for j-uncenter().
- */
-@mixin uncenter() {
-  @include j-uncenter;
 }
 
 /**
@@ -340,13 +257,6 @@
 }
 
 /**
- * Alias for j-stack().
- */
-@mixin stack($args...) {
-  @include j-stack($args...);
-}
-
-/**
  * Unstack an element.
  */
 @mixin j-unstack() {
@@ -370,13 +280,6 @@
   &:last-child {
     margin-#{jeet-opposite-direction($side)}: 0;
   }
-}
-
-/**
- * Alias for j-unstack().
- */
-@mixin unstack() {
-  @include j-unstack();
 }
 
 /**
@@ -406,13 +309,6 @@
 }
 
 /**
- * Alias for j-align().
- */
-@mixin align($args...) {
-  @include j-align($args...);
-}
-
-/**
  * Apply a clearfix to an element.
  */
 @mixin j-cf() {
@@ -426,11 +322,4 @@
   &:after {
     clear: both;
   }
-}
-
-/**
- * Alias for j-cf().
- */
-@mixin cf() {
-  @include j-cf();
 }
