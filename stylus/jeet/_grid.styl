@@ -180,11 +180,6 @@ j-center(max-width = jeet.max-width, pad = 0)
   padding-right: pad
 
 /**
- * Alias for j-center.
- */
-center = j-center
-
-/**
  * Uncenter an element.
  */
 j-uncenter()
@@ -227,7 +222,7 @@ j-stack(pad = 0, align = false)
 
   if (align is not false)
     if (align == center) or (align == c)
-      text-align: {'center'}
+      text-align: center
     if (align == left) or (align == l)
       text-align: left
     if (align == right) or (align == r)
