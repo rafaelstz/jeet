@@ -1,5 +1,5 @@
 @import 'scss/jeet/index';
 
-@include edit(blue);
+@include j-edit(blue);
 
-@include edit(blue, $important: true);
+@include j-edit(blue, $important: true);
